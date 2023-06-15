@@ -41,9 +41,9 @@ public class CustomerTest extends BaseTest{
         String message = JsonPath.read(response.getBody().asString(), "$.message");
         Assert.assertEquals(message,ADD_CUSTOMER_SUCCESS_RESPONSE);
 
-        /**Introducing an explicit delay of 5 seconds at the end of POST call for the DB insertion to complete **/
+        /**Introducing an explicit delay of 10 seconds at the end of POST call for the DB insertion to complete **/
         try {
-            Thread.sleep(5000);
+            Thread.sleep(10000);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
