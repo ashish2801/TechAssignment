@@ -11,7 +11,7 @@ public class ConfigLoader {
     private  final  Properties properties;
 
     private ConfigLoader(){
-        properties = PropertyLoader.loadProperty(System.getProperty("user.dir")+"/src"+File.separator+"main"+File.separator+"resources"+File.separator+"config.properties");
+        properties = PropertyLoader.loadProperty(System.getProperty("user.dir")+File.separator+"src"+File.separator+"main"+File.separator+"resources"+File.separator+"config.properties");
     }
 
     /**SingleTon Design Pattern**/
