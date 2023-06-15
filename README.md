@@ -18,6 +18,9 @@ database.Path=$YOUR_LOCAL_PATH_TO_CUSTOMERS.DB FILE (e.g : /Users/ashish/Desktop
 # To run the automation Suite from terminal via the Maven Commands
 
 Step 1: Open terminal and navigate inside the project root directory <br>
+
+(e.g: /Users/ashish/Documents/Code/PingsafeTechAssignment) <br>
+
 Step 2: Run the command in the terminal to trigger Regression Suite <br> 
 
 **mvn clean test -DsuiteFile=regressionSuite** <br>
