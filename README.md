@@ -7,10 +7,10 @@
 # Steps To Follow before triggering the tests
 
 Step 1: Start the service locally before executing the test cases. <br>
-Step 2: Set the below two global properties under config.properties file.
+Step 2: Set the below two global properties under "config.properties" file in the solution ( /src/main/resources ).
 
-api.basePath=http://localhost:8080 <br>
-database.Path=$YOUR_LOCAL_PATH_TO_CUSTOMERS.DB FILE (e.g : /Users/ashish/Desktop/sdet-assignment/customers.db) <br>
+1) api.basePath=http://localhost:8080 <br>
+2) database.Path=$YOUR_LOCAL_PATH_TO_CUSTOMERS.DB FILE (e.g : /Users/ashish/Desktop/sdet-assignment/customers.db) <br>
 
 ![image](https://github.com/ashish2801/TechAssignment/assets/59378181/0c70e84c-eb44-405c-afdb-82cd9345d3e5)
 
