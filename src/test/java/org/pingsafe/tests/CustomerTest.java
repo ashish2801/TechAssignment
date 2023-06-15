@@ -21,7 +21,7 @@ public class CustomerTest extends BaseTest{
 
     private static String customerID; /**customerID static variable to be used in the GET call for 2nd test case**/
 
-    @Description("Verify able to Add A Customer")/** Adding description for Allure reporting **/
+    @Description("Verify if able to Add A Customer")/** Adding description for Allure reporting **/
     @Test(groups = {"Sanity","Regression"},dataProviderClass = CustomerDataProvider.class, dataProvider = "customerData") /** Driving the input values via the data provider **/
     public void verify_able_to_add_customer(String id, String customerName, String phoneNumber){
 
@@ -56,7 +56,7 @@ public class CustomerTest extends BaseTest{
     public void verify_able_to_get_customer_Details(){
 
         /**Firing the GET call**/
-        Response response = CustomerServiceHelper.fetchCustomerDetail("174"); /**reusing customerID variable from first test case**/
+        Response response = CustomerServiceHelper.fetchCustomerDetail(customerID); /**reusing customerID variable from first test case**/
 
         /**Asserting for the response code **/
         Assert.assertEquals(response.getStatusCode(), StatusCodes.CODE_200.code);
@@ -69,7 +69,7 @@ public class CustomerTest extends BaseTest{
 
     }
 
-    @Description("Verify Error for invalid phone with 9 digits")/** Adding description for Allure reporting **/
+    @Description("Verify error when creating customer with invalid phoneNumber")/** Adding description for Allure reporting **/
     @Test(groups = {"Regression"},dataProviderClass = CustomerDataProvider.class, dataProvider = "invalidPhone") /** Driving the input values via the data provider **/
     public void verify_error_for_invalid_phone(String id, String customerName, String phoneNumber){
 
@@ -88,7 +88,7 @@ public class CustomerTest extends BaseTest{
 
     }
 
-    @Description("Verify Error for invalid ID")/** Adding description for Allure reporting **/
+    @Description("Verify Error When trying to create duplicate customer entries")/** Adding description for Allure reporting **/
     @Test(groups = {"Regression"},dataProviderClass = CustomerDataProvider.class, dataProvider = "duplicateCustomerData") /** Driving the input values via the data provider **/
     public void verify_error_for_invalid_id(String customerName, String phoneNumber){
 
@@ -108,7 +108,7 @@ public class CustomerTest extends BaseTest{
 
     }
 
-    @Description("Verify Error for invalid Token")/** Adding description for Allure reporting **/
+    @Description("Verify Error with invalid Access Token")/** Adding description for Allure reporting **/
     @Test(groups = {"Regression"},dataProviderClass = CustomerDataProvider.class, dataProvider = "customerData") /** Driving the input values via the data provider **/
     public void verify_error_for_invalid_token(String id,String customerName, String phoneNumber){
 
@@ -128,7 +128,7 @@ public class CustomerTest extends BaseTest{
 
     }
 
-    @Description("Verify Error for empty ID")/** Adding description for Allure reporting **/
+    @Description("Verify that the CustomerID field is mandatory")/** Adding description for Allure reporting **/
     @Test(groups = {"Regression"},dataProviderClass = CustomerDataProvider.class, dataProvider = "emptyID") /** Driving the input values via the data provider **/
     public void verify_error_for_empty_id(String id,String customerName, String phoneNumber){
 
@@ -148,7 +148,7 @@ public class CustomerTest extends BaseTest{
 
     }
 
-    @Description("Verify Error for empty Phone")/** Adding description for Allure reporting **/
+    @Description("Verify that the PhoneNumber field is mandatory")/** Adding description for Allure reporting **/
     @Test(groups = {"Regression"},dataProviderClass = CustomerDataProvider.class, dataProvider = "emptyPhone") /** Driving the input values via the data provider **/
     public void verify_error_for_empty_phone(String id,String customerName, String phoneNumber){
 
