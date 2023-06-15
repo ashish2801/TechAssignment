@@ -7,7 +7,7 @@ public class FakerUtils {
     /**Generic Method for generating random Numbers**/
     public static String generateRandomNumberOfLength(int length){
         Faker faker = new Faker();
-        return faker.regexify("\\d{" + length + "}");
+        return faker.regexify("[1-9]{" + length + "}");
     }
 
     /**Generic Method for generating random String**/

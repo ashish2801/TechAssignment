@@ -9,13 +9,19 @@ import org.testng.ITestResult;
 public class RetryListener implements IRetryAnalyzer {
 
     private int count=0;
-    private int retries =1;
+    private int retries =2;
 
     @Override
     public boolean retry(ITestResult iTestResult) {
         boolean value = false;
         if (ConfigLoader.getInstance().getRetryFailedCases().equalsIgnoreCase(Constants.YES)) {
             if (count < retries) {
+                try {
+                    System.out.println("Waiting for 10 seconds before retrial");
+                    Thread.sleep(1000);
+                } catch (InterruptedException e) {
+                    throw new RuntimeException(e);
+                }
                 System.out.println("Retrying the test case "+ iTestResult.getMethod().getMethodName());
                 count++;
                 return true;
