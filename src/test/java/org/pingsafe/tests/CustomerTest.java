@@ -41,19 +41,19 @@ public class CustomerTest extends BaseTest{
         String message = JsonPath.read(response.getBody().asString(), "$.message");
         Assert.assertEquals(message,ADD_CUSTOMER_SUCCESS_RESPONSE);
 
-        /**Introducing an explicit delay of 10 seconds at the end of POST call for the DB insertion to complete **/
+    }
+
+
+    @Description("Verify If able to fetch Customer Details") /** Adding description for Allure reporting **/
+    @Test(groups = {"Sanity","Regression"}, dependsOnMethods={"verify_able_to_add_customer"})
+    public void verify_able_to_get_customer_Details(){
+
+        /**Introducing an explicit delay of 10 seconds at the start of GET call for the DB insertion to complete **/
         try {
             Thread.sleep(10000);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
-
-    }
-
-
-    @Description("Verify If able to fetch Customer Details") /** Adding description for Allure reporting **/
-    @Test(groups = {"Sanity","Regression"})
-    public void verify_able_to_get_customer_Details(){
 
         /**Firing the GET call**/
         Response response = CustomerServiceHelper.fetchCustomerDetail(customerID); /**reusing customerID variable from first test case**/
