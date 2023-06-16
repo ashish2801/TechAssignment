@@ -1,7 +1,7 @@
 # Existing Observations <br>
 
-1) Any customer Ids starting with leading 0s cannot be fetched using the GET call. <br>
-2) No such restrictions at POST calls though
+1) Trying to fetch any customer detail with Id starting with leading 0s results in 400 Bad Request even is id exists in DB.  <br>
+
 
 
 # Software Pre-Requisites:
