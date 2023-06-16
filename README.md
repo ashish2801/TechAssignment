@@ -1,6 +1,6 @@
 # Existing Observations <br>
 
-1) Trying to fetch any customer detail with Id starting with leading 0s results in 400 Bad Request even is id exists in DB.  <br>
+1) Trying to fetch any customer detail with Id starting with leading 0's results in 400 Bad Request even is if ID exists in DB.  <br>
 
 
 
