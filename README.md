@@ -61,6 +61,7 @@ To view the report in the HTML format run the command terminal : <br>
 7) Serialization and Deserialization of POJO classes <br>
 8) Reporing via the Allure Reports <br>
 9) Validation of API Response with the Database <br>
+10) Usage of Java Faker API to generate random test data for customer name , id & phonenumber for each test cases. <br>
 
 
 ## Test Cases:
