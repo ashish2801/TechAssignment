@@ -1,3 +1,9 @@
+# Existing Observations <br>
+
+1) Any customer Ids starting with leading 0s cannot be fetched using the GET call. <br>
+2) No such restrictions at POST calls though
+
+
 # Software Pre-Requisites:
 
 1) Java 11
