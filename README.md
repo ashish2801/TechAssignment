@@ -29,7 +29,7 @@ Step 2: Run the command in the terminal to trigger Regression Suite <br>
 
 Step 1: Open Solution in the IDE <br>
 Step 2: Navigate inside the path : **/src/test/resources/runners** <br>
-Step 3: Right click on any of the suite file and select "Run" <br>
+Step 3: Right click on regression suite file and select "Run" <br>
 
 ![Screenshot 2023-06-15 at 9 24 45 PM](https://github.com/ashish2801/TechAssignment/assets/59378181/d56452ba-afb4-452b-965c-13a8d3c78083)
 
@@ -46,16 +46,15 @@ To view the report in the HTML format run the command terminal : <br>
 
 # Implementations:
 
-1) Sanity Suite to trigger positive test cases. <br>
-2) Regression Suite to trigger all test cases. <br>
-3) Retrial of the failed test cases via retry listener <br>
-4) Segregation of Constants <br>
-5) Usage of Builder and Singleton design patterns <br>
-6) Usage of Custom Enums & Listeners <br>
-7) Usage of Lombok Plugins to create setters and getters in POJO classes <br>
-8) Serialization and Deserialization of POJO classes <br>
-9) Reporing via the Allure Reports <br>
-10) Validation of API Response with the Database <br>
+1) Regression Suite to trigger all test cases. <br>
+2) Retrial of the failed test cases via retry listener <br>
+3) Segregation of Constants <br>
+4) Usage of Builder and Singleton design patterns <br>
+5) Usage of Custom Enums & Listeners <br>
+6) Usage of Lombok Plugins to create setters and getters in POJO classes <br>
+7) Serialization and Deserialization of POJO classes <br>
+8) Reporing via the Allure Reports <br>
+9) Validation of API Response with the Database <br>
 
 
 ## Test Cases:
